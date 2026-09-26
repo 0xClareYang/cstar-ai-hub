@@ -4,7 +4,7 @@ theme: default
 paginate: true
 lang: zh-CN
 title: C-Star AI Hub｜开源 AI 与隐私 Builder 计划
-description: GCC Cohort 4 application deck
+description: C-Star AI Hub project overview
 ---
 
 # C-Star AI Hub
