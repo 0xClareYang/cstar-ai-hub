@@ -13,7 +13,7 @@ description: C-Star AI Hub project overview
 
 面向华语 AI Builders，建立从学习、连接到 Build 与 Open Contribution 的实践路径。
 
-**Early-stage public initiative**
+**一个正在生长的开放实践项目**
 
 ---
 
@@ -58,16 +58,16 @@ description: C-Star AI Hub project overview
 - **2026-08-22**：AI × Midnight Builder Meetup Hangzhou
 - Clare 是该活动的 **Initiator / Organizer**
 
-Founder 与项目直接相关的能力证明：
+发起人与项目直接相关的实践：
 
 - AI × Privacy / Community Practice
 - Builder / Community Execution
 
-这些是早期执行记录，不代表项目已经形成成熟组织或正式合作网络。
+项目仍处于早期阶段，将从这些真实实践继续积累。
 
 ---
 
-# 6-Month Proposed Plan
+# 接下来六个月
 
 ## 1. Open Knowledge
 
@@ -81,11 +81,11 @@ Resource Map v0.1，以及少量有来源、可复用的中文 Tutorial / Resear
 
 后半程视条件尝试一次小型 collaborative build / contribution experiment，目标是产生真实的公开贡献。
 
-不承诺多个城市、大量活动、大型 Hackathon 或成熟孵化器。
+先把少量工作做实，再逐步扩大范围。
 
 ---
 
-# Public Outputs & Funding
+# 公开产出与资源投入
 
 ## Public Outputs
 
@@ -96,7 +96,7 @@ Resource Map v0.1，以及少量有来源、可复用的中文 Tutorial / Resear
 - Builder Outputs
 - Public GitHub Archive
 
-## Funding Use
+## 资源主要用于
 
 - 内容与 Research
 - Builder Activities
@@ -104,4 +104,4 @@ Resource Map v0.1，以及少量有来源、可复用的中文 Tutorial / Resear
 - Community Coordination
 - 必要工具和基础运营
 
-这笔 Grant 的目标不是支持一次活动，而是帮助 C-Star 把已有的小规模实践转化为可持续、可复用的公共知识与 Builder Pathway。
+目标不是只完成一次活动，而是把已有的小规模实践逐步转化为可持续、可复用的公共知识与 Builder Pathway。
