@@ -1,74 +1,35 @@
 # AI × Ethereum Builder Commons — Chinese-Speaking Pilot
 
-**Status:** Proposed / Planning · **Duration:** 12 weeks (tentative) · **Project lead:** Clare Yang, C-Star AI Hub
+**Status:** Phase 0 starter available · Learner validation and external technical review pending
 
-## Project Overview
+**Lead:** Clare Yang, [C-Star AI Hub](../../README.md)
 
-C-Star AI Hub proposes a hands-on Ethereum developer education pilot for Chinese-speaking builders who use AI tools to write and prototype software. AI-assisted coding can help learners get started, but it does not teach them what a wallet signs, why a transaction fails, or how to verify contract behavior. The pilot will help participants build and explain their first working Ethereum prototype while producing Chinese-language materials that others can use independently.
+## Problem and evidence
 
-The pilot has not launched. The schedule and technical collaborators are pending. The Ethereum Foundation has not endorsed, sponsored, or funded the project.
+This pilot is for Chinese-speaking builders who already use AI to write or debug small programs and have yet to build an Ethereum application. We want to find out whether a short exercise helps them review a transaction request, explain what a wallet authorizes, and verify what happened onchain before they build with smart contracts or agents.
 
-## Why Ethereum
+The curriculum starts from existing work: [ethereum.org's Chinese transaction guide](https://ethereum.org/zh/developers/docs/transactions/) explains transaction fields, [WTF Solidity](https://github.com/AmazingAng/WTF-Solidity) teaches Solidity in Chinese, and [Speedrun Ethereum](https://speedrunethereum.com/) offers wallet labs and hands-on challenges. Our hypothesis is that some AI-assisted beginners still need a focused exercise connecting generated instructions, human approval, and receipt evidence. We will observe people using existing materials before deciding where a new lesson helps.
 
-Ethereum gives learners a public environment in which to inspect transactions, test smart contracts, and verify how an application interacts with a shared network. The pilot will connect Chinese-speaking AI builders to existing Ethereum documentation and developer communities, and give educators reusable exercises and a public account of where beginners get stuck. Learners will be invited to contribute fixes or improvements through GitHub issues and pull requests.
+Clare organized the August 22, 2026 [AI × Midnight Builder Meetup in Hangzhou](../../events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md), with estimated attendance of 30–40. This is evidence of organizing an AI and privacy event. Ethereum learning, project completion, and retention still need their own evidence.
 
-## Program Design
+## Phase 0 · A transaction learners can explain
 
-Four free technical workshops will move from a first Ethereum interaction to prototype review. Learners will use AI to draft and debug code, then read, test, and explain the results. The proposed exercises use local development networks and the [Sepolia testnet](https://ethereum.org/developers/docs/networks/#sepolia). They require no real funds or mainnet credentials.
+Start with the [Chinese tutorial and runnable starter](starter/README.md). The code previews a zero-value self-send on a local Anvil development chain, requires explicit confirmation, and reads the resulting transaction and receipt. A separate read-only command inspects existing Sepolia transactions. Learners practice checking the network, sender, recipient, value, calldata, and receipt status. Ethereum's public transaction and receipt interfaces let another learner or educator reproduce those checks.
 
-| Workshop | Hands-on work | Planned output |
-| --- | --- | --- |
-| 1. First Ethereum interaction | Connect a test wallet, send a test transaction, and inspect the receipt | Minimal app and reproducible setup guide |
-| 2. Smart contracts | Test and deploy a small contract, then call it from an app | Annotated contract, tests, and app example |
-| 3. AI agents and Ethereum | Have an agent propose a testnet transaction and require human approval before signing | Reproducible demo of restricted permissions and key-handling boundaries |
-| 4. Prototype review | Run each prototype from its setup instructions, explain its onchain behavior, and review failures | Reviewed demos and a list of improvements |
+The first pilot is a single small session. The [pilot protocol](PILOT.md) covers recruitment, comparison with existing resources, acceptance criteria, follow-up, risks, and resource assumptions. The starter has automated tests. A named external technical reviewer and learner cohort are pending.
 
-## Public Goods
+## Phase 1 · Conditional 12-week builder program
 
-- Four Chinese-language learning modules, one per workshop, with exercises, setup instructions, references to Ethereum documentation, and technical review notes.
-- Open starter code and reference demos with steps to reproduce them and documented limitations.
-- A public pilot report with aggregate outcomes, lessons, and recommendations for others who want to run or adapt the program.
+Expand only after the Phase 0 review and continuation criteria in the pilot protocol are met. The proposed four workshops would cover transaction verification, a small tested contract and app, human approval of an agent-proposed operation, and independent prototype reproduction. The public outputs would include reviewed Chinese modules, reusable code, and an aggregate report. Cohort and completion targets will be set from observed capacity and outcomes before scheduling.
 
-Materials will be available for independent study under the repository's [licensing terms](../../LICENSE.md): CC BY 4.0 for original educational material and MIT for original code. Participant work will be shared with permission.
+## Ownership and maintenance
 
-## Success Metrics
+Clare owns recruitment, delivery, evidence collection, and publication. A technical collaborator (to be confirmed) would review exercises, reproduce the demo independently, and help teach. The starter uses Node.js with no package dependencies and a local Anvil node. Educators can reuse the tutorial, code and pilot protocol independently under the repository's [license](../../LICENSE.md) (CC BY 4.0 for original teaching materials and MIT for original code).
 
-These are planned deliverables and measurement methods. Results will be reported after delivery.
+Keep setup problems and corrections in GitHub issues or pull requests using the [contribution guide](../../CONTRIBUTING.md). If facilitator capacity is unavailable, pause cohort delivery and keep the self-study material available. Publish known limitations and the last verified tool versions when updating the lesson.
 
-| What we will measure | Target or evidence |
-| --- | --- |
-| Workshops delivered | Four; verify through published agendas and recaps |
-| Chinese modules released | Four; verify through repository links and review history |
-| Prototype completion | Count submissions that run from their instructions and demonstrate a verifiable testnet interaction; record review outcomes |
-| Participation and continued building | Report aggregate unique attendance and evidence of continued work from an opt-in follow-up about 30 days after the final workshop; include the response rate |
-| Public reporting | Publish one pilot report with results and limitations, then add the follow-up findings |
+## Feedback and contact
 
-## Existing Experience
+For [ESP Office Hours](https://esp.ethereum.foundation/applicants/office-hours), we would like feedback on the transaction review exercise, relevant Chinese-language resources and communities, and what evidence would justify a larger pilot. C-Star runs this independently.
 
-On August 22, 2026, Clare organized the [AI × Midnight Builder Meetup in Hangzhou](../../events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md), an in-person AI and privacy community event with approximately 30–40 participants. It was separate from Ethereum. C-Star AI Hub already maintains a public repository with open learning materials, including a [Local AI privacy guide outline](../../resources/local-ai-privacy-practical-guide-outline.md). This experience informs the pilot's community and education design.
-
-## Team
-
-- **Clare Yang — Project lead:** program design, community outreach, partner coordination, and operations.
-- **Technical collaborators — To be confirmed:** develop and verify demos, teach workshops, and review code, exercises, and published learning materials.
-
-## Timeline
-
-| Period | Planned work |
-| --- | --- |
-| Weeks 1–2: Prepare | Confirm technical support, scope the exercises, and review the first workshop and module before scheduling delivery. |
-| Weeks 3–10: Deliver | Run four workshops and publish each module and demo after technical review. |
-| Weeks 11–12: Publish | Review prototype evidence and release the pilot report. Add opt-in follow-up findings about 30 days after the final workshop. |
-
-## What We Hope to Learn from ESP
-
-We are seeking project feedback through [Ethereum Foundation ESP Office Hours](https://esp.ethereum.foundation/).
-
-1. Which Ethereum concepts and security practices should a first prototype demonstrate? Should we test the format with one workshop and module before running the full pilot?
-2. Which existing Ethereum education resources and Chinese-speaking developer communities should we build on? Where could we find technical reviewers?
-3. What evidence would help other Ethereum educators judge whether to reuse the materials or support continued builder participation?
-
-## Links & Contact
-
-- [C-Star AI Hub repository](https://github.com/0xClareYang/cstar-ai-hub) · [Contribution guide](../../CONTRIBUTING.md)
-- Clare Yang: [GitHub](https://github.com/0xClareYang) · [X (@0xClareYang)](https://x.com/0xClareYang)
+Clare Yang · [GitHub](https://github.com/0xClareYang) · [X](https://x.com/0xClareYang)
