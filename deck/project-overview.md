@@ -65,6 +65,8 @@ description: C-Star AI Hub project overview
 
 项目仍处于早期阶段，将从这些真实实践继续积累。
 
+Ethereum 专项：[Privacy Boundary Lab](../initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md)。用本地交易比较 AI Agent 提案的数据暴露与缩减结果。
+
 ---
 
 # 接下来六个月

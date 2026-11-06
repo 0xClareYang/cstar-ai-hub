@@ -8,7 +8,7 @@ C-Star AI Hub 是一个面向华语 AI Builders 的开放学习与实践项目�
 
 **[从这里开始](START-HERE.md) · [查看资源](resources/README.md) · [活动记录](events/README.md) · [参与贡献](CONTRIBUTING.md)**
 
-[AI × Ethereum Builder Commons — Chinese-Speaking Pilot](initiatives/ai-ethereum-builder-commons/README.md) — A transaction verification starter and proposed learning pilot for Chinese-speaking AI builders.
+[Ethereum Privacy Builders Lab](initiatives/ai-ethereum-builder-commons/README.md) — 用本地实验复现 AI Agent 交易提案的数据暴露，检查授权并验证改进结果。
 
 ## 我们为什么做这件事
 

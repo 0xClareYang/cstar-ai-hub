@@ -31,6 +31,8 @@
 
 ## 如果你想动手实践
 
+Want to build? Start with [Privacy Boundary Lab](initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md).
+
 你可以从一个范围清楚、能够公开结果的小实践开始：
 
 - 复现并记录一个 Local AI setup；

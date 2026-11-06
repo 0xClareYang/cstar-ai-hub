@@ -1,35 +1,30 @@
-# AI × Ethereum Builder Commons — Chinese-Speaking Pilot
+# Ethereum Privacy Builders Lab
 
-**Status:** Phase 0 starter available · Learner validation and external technical review pending
+C-Star AI Hub's Ethereum initiative for Chinese-speaking developers building with AI. Its first module, [Privacy Boundary Lab](starter/privacy-lab.md), shows how an agent-style transaction proposal can expose an internal note in Ethereum calldata, and how to verify that a smaller payload removes it.
 
-**Lead:** Clare Yang, [C-Star AI Hub](../../README.md)
+## Problem and why Ethereum
 
-## Problem and evidence
+AI-assisted developers can generate transaction code before they know what it sends, who can read the data, or what the signer authorizes. The specific learning gap is a hypothesis to test with developers. Ethereum makes the boundary observable: the RPC receives a transaction request, and anyone with access to the chain can read the mined transaction input and receipt. The [Ethereum privacy roadmap](https://ethereum.org/roadmap/privacy/) covers private reads, private writes and private proving. This lab studies data minimization at the application layer. The [Ethereum privacy app guide](https://ethereum.org/latest/privacy-apps-on-ethereum) offers a separate path for cryptographic techniques.
 
-This pilot is for Chinese-speaking builders who already use AI to write or debug small programs and have yet to build an Ethereum application. We want to find out whether a short exercise helps them review a transaction request, explain what a wallet authorizes, and verify what happened onchain before they build with smart contracts or agents.
+## Why C-Star and who does what
 
-The curriculum starts from existing work: [ethereum.org's Chinese transaction guide](https://ethereum.org/zh/developers/docs/transactions/) explains transaction fields, [WTF Solidity](https://github.com/AmazingAng/WTF-Solidity) teaches Solidity in Chinese, and [Speedrun Ethereum](https://speedrunethereum.com/) offers wallet labs and hands-on challenges. Our hypothesis is that some AI-assisted beginners still need a focused exercise connecting generated instructions, human approval, and receipt evidence. We will observe people using existing materials before deciding where a new lesson helps.
+- **Clare Yang — Project Lead & Ecosystem Development.** Owns strategy, ecosystem outreach, community operations, recruitment, content coordination and delivery. She organized the [August 2026 AI × Midnight Builder Meetup in Hangzhou](../../events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md), an AI and privacy event. [GitHub](https://github.com/0xClareYang) · [LinkedIn](https://www.linkedin.com/in/clare-yang-084795293)
+- **PC (P-ercona) — Technical Lead & Builder Support.** Proposed responsibilities include the technical demo, curriculum, code review and learner support. The public CKB study repository documents local devnet and RPC checks and a transfer exercise that verifies change, fees and Cell status. This shows experience documenting reproducible blockchain exercises. Ethereum privacy work and review of this lab will be evidenced separately. [GitHub](https://github.com/P-ercona) · [CKB builder notes](https://github.com/P-ercona/ckbuilder-notes)
 
-Clare organized the August 22, 2026 [AI × Midnight Builder Meetup in Hangzhou](../../events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md), with estimated attendance of 30–40. This is evidence of organizing an AI and privacy event. Ethereum learning, project completion, and retention still need their own evidence.
+## Technical approach and first milestone
 
-## Phase 0 · A transaction learners can explain
+The lab uses a deterministic agent scenario with synthetic input and a fresh local Anvil chain. Learners **observe** a raw note in mined calldata, **explain** the visibility and signing boundary, **improve** the payload by sending only an unrelated reference, and **verify** both transactions through JSON-RPC. The tool restricts the destination, value and payload shape and requires one explicit confirmation for the two local sends. The [transaction starter](starter/README.md) remains optional background on wallets and receipts.
 
-Start with the [Chinese tutorial and runnable starter](starter/README.md). The code previews a zero-value self-send on a local Anvil development chain, requires explicit confirmation, and reads the resulting transaction and receipt. A separate read-only command inspects existing Sepolia transactions. Learners practice checking the network, sender, recipient, value, calldata, and receipt status. Ethereum's public transaction and receipt interfaces let another learner or educator reproduce those checks.
+| Status | Evidence or acceptance |
+| --- | --- |
+| **Completed** | The [lab guide](starter/privacy-lab.md), runnable code and automated checks. The local test must reproduce two successful transactions, confirm the note appears only in the baseline, and reject an unapproved or invalid request. |
+| **In Progress** | First milestone acceptance. An external developer should install from the guide, reproduce both outputs, identify who can read each field, and explain residual risks. Record tool versions and fixes through a GitHub issue or PR. |
+| **Proposed** | Observe a small learner cohort using the [pilot protocol](PILOT.md). Consider four workshops over 12 weeks only if independent reproduction, learner outcomes and facilitator capacity support it. |
 
-The first pilot is a single small session. The [pilot protocol](PILOT.md) covers recruitment, comparison with existing resources, acceptance criteria, follow-up, risks, and resource assumptions. The starter has automated tests. A named external technical reviewer and learner cohort are pending.
+## Public goods and limitations
 
-## Phase 1 · Conditional 12-week builder program
+The reusable materials are the Chinese exercise, test suite, exposure checklist and pilot protocol. The repository [license](../../LICENSE.md) applies. Use the [contribution guide](../../CONTRIBUTING.md) to report setup failures or propose improvements. The exercise can be run independently of a workshop.
 
-Expand only after the Phase 0 review and continuation criteria in the pilot protocol are met. The proposed four workshops would cover transaction verification, a small tested contract and app, human approval of an agent-proposed operation, and independent prototype reproduction. The public outputs would include reviewed Chinese modules, reusable code, and an aggregate report. Cohort and completion targets will be set from observed capacity and outcomes before scheduling.
+Addresses, fees, timing and the opaque reference remain visible and linkable. The sample does not run an external AI service, model RPC privacy, protect the signer or implement private transactions or EIP-7702 delegation. External review and learner outcomes are pending.
 
-## Ownership and maintenance
-
-Clare owns recruitment, delivery, evidence collection, and publication. A technical collaborator (to be confirmed) would review exercises, reproduce the demo independently, and help teach. The starter uses Node.js with no package dependencies and a local Anvil node. Educators can reuse the tutorial, code and pilot protocol independently under the repository's [license](../../LICENSE.md) (CC BY 4.0 for original teaching materials and MIT for original code).
-
-Keep setup problems and corrections in GitHub issues or pull requests using the [contribution guide](../../CONTRIBUTING.md). If facilitator capacity is unavailable, pause cohort delivery and keep the self-study material available. Publish known limitations and the last verified tool versions when updating the lesson.
-
-## Feedback and contact
-
-For [ESP Office Hours](https://esp.ethereum.foundation/applicants/office-hours), we would like feedback on the transaction review exercise, relevant Chinese-language resources and communities, and what evidence would justify a larger pilot. C-Star runs this independently.
-
-Clare Yang · [GitHub](https://github.com/0xClareYang) · [X](https://x.com/0xClareYang)
+For [ESP Office Hours](https://esp.ethereum.foundation/applicants/office-hours), we would welcome feedback on existing application-layer privacy exercises and on what evidence would make this lesson useful to other Ethereum educators.

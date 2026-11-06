@@ -11,7 +11,7 @@ Recruit adults who can run a small AI-generated script, prefer Chinese instructi
 | Hypothesis | How to test it |
 | --- | --- |
 | Learners can generate a transaction request but miss a wrong network, recipient, value, or calldata | Use a fictional request on paper. Ask what they would approve and why. Never submit this request. |
-| Learners confuse a submitted hash with successful execution | Ask them to explain a pending, successful, and reverted result using prepared cases. |
+| Learners mistake hex encoding or a successful receipt for privacy | Ask them to decode a synthetic note from calldata and identify who can read it. |
 | Learners cannot get from existing resources to independent verification | Give them links to the Chinese transaction guide and existing wallet labs. Record the first blocker, what they tried, and any facilitator help before introducing the starter. |
 | Learners have trouble finding a next step | Offer one reproducible tutorial issue, a documentation correction, or a follow-on contract exercise. Check what they actually did in about 30 days. |
 
@@ -20,8 +20,8 @@ Interview prompts: “Show me the last Ethereum setup you tried.” “What did 
 ## Run one session and score the work
 
 1. **Baseline (15 minutes):** With existing resources, ask each learner to inspect a fictional transaction and interpret a sample receipt. Record errors, time, and help required.
-2. **Build (25 minutes):** Run the local exercise, cancel once, approve the intended zero-value self-send, and inspect the result. Allow pairing for setup and record that help separately.
-3. **Transfer task (15 minutes):** Give each learner a different review scenario and an existing Sepolia hash. Without step-by-step coaching, have them flag the unsafe field, explain who signs, and identify the receipt status and block. Record technical interruptions separately from conceptual errors.
+2. **Build (25 minutes):** Run [Privacy Boundary Lab](starter/privacy-lab.md), cancel once, then approve the two local sends and compare their mined inputs. Allow pairing for setup and record that help separately.
+3. **Transfer task (15 minutes):** Give each learner a different synthetic proposal and sample receipt. Without step-by-step coaching, have them flag the unnecessary data and its audience, explain who authorizes and signs, and identify what remains visible after data minimization. Record technical interruptions separately from conceptual errors.
 4. **Exit and follow-up (5 minutes plus an opt-in check at about 30 days):** Ask for a blocking issue or documentation correction. Look for a concrete artifact at follow-up (reproduced exercise, issue, PR, or another app), and publish response and nonresponse counts separately.
 
 Use an anonymous local worksheet with cohort code, baseline and transfer result by task, type of help (none, setup, conceptual), first blocker, follow-up opted in, response, and artifact category. Report aggregates and examples with consent. Keep scheduling contacts separate and discard identifiable records when follow-up is complete. The small pre/post comparison informs lesson design and cannot establish causal impact.
@@ -30,7 +30,7 @@ Use an anonymous local worksheet with cohort code, baseline and transfer result 
 
 | Gate | Owner | Acceptance |
 | --- | --- | --- |
-| Reproduction before recruitment | Clare + technical reviewer (pending) | Reviewer runs the tutorial from a clean environment, reproduces local success and revert tests and Sepolia lookup, and records issues and checked versions. Resolve any signing or safety blocker before teaching. |
+| Reproduction before recruitment | Clare + PC for technical review (proposed) | An independent developer follows the lab from a clean environment, reproduces the calldata comparison and permission tests, and records issues and checked versions. Resolve any safety blocker before teaching. |
 | Demand and teaching check | Clare | Target: at least three discovery interviews show a concrete blocker during an attempt that existing resources did not resolve within the exercise. Target: at least two-thirds of a minimum six learners independently pass all three transfer checks. Record all denominators and missing data. |
 | Continued building and delivery capacity | Clare + technical reviewer | Target: at least two learners show a concrete follow-on artifact within about 30 days. Confirm reviewer time and facilitator coverage. Publish aggregate evidence, failures and fixes, and a decision to stop, revise, or expand. |
 

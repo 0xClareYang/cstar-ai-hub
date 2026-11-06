@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { setTimeout as delay } from 'node:timers/promises';
 import test from 'node:test';
+import { APPROVAL, compare, plan } from './privacy-lab.mjs';
 import {
   confirmation, createRpc, inspectTransaction, LOCAL_CHAIN, prepareLocal, sendLocal,
   SEPOLIA_CHAIN,
@@ -104,6 +105,17 @@ test('transport rejects RPC errors and disallows redirects', async () => {
   await assert.rejects(rpc('eth_chainId'), /-32000/);
 });
 
+test('privacy experiment declines without RPC and rejects changed calldata and chain', async () => {
+  const { rpc, calls } = fixture();
+  assert.equal(await compare(rpc, {}, 'no'), null);
+  assert.deepEqual(calls, []);
+  const proposal = await plan(rpc);
+  await assert.rejects(compare(rpc, { ...proposal, baseline: '0x1234' }, APPROVAL), /synthetic/);
+  await assert.rejects(compare(fixture({ eth_chainId: SEPOLIA_CHAIN }).rpc,
+    proposal, APPROVAL), /Wrong network/);
+  assert.equal(calls.some(([method]) => method === 'eth_sendTransaction'), false);
+});
+
 test('Anvil mines the approved self-send and reports a real local revert', {
   skip: !process.env.ANVIL_BIN && 'Set ANVIL_BIN to run the local integration test',
   timeout: 20000,
@@ -135,6 +147,18 @@ test('Anvil mines the approved self-send and reports a real local revert', {
   assert.equal(result.valueWei, '0');
   assert.equal(result.data, '0x');
   assert.equal(result.gasUsed, 21000);
+
+  const before = await rpc('eth_getTransactionCount', [proposal.from, 'latest']);
+  const privacyPlan = await plan(rpc);
+  assert.equal(await compare(rpc, privacyPlan, 'no'), null);
+  assert.equal(await rpc('eth_getTransactionCount', [proposal.from, 'latest']), before);
+  const { baseline, minimized } = await compare(rpc, privacyPlan, APPROVAL);
+  assert.notEqual(baseline.hash, minimized.hash);
+  assert.equal(baseline.syntheticNoteVisible, true);
+  assert.equal(minimized.syntheticNoteVisible, false);
+  assert.equal(baseline.calldataBytes, 44);
+  assert.equal(minimized.calldataBytes, 16);
+  assert.ok(baseline.data.startsWith(minimized.data), 'Shared reference remains linkable');
 
   // Test fixture only: install PUSH1 0 PUSH1 0 REVERT and invoke it with test gas.
   const [, target] = await rpc('eth_accounts');
