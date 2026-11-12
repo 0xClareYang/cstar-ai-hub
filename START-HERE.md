@@ -1,6 +1,6 @@
 # Start Here
 
-这里是 C-Star AI Hub 的行动入口。无论你想学习、动手实践，还是贡献一处小改进，都可以直接从公开内容开始。
+这里是 **C-Star AI Hub｜Agent Privacy Lab** 的参与入口。从一次复现、一个真实的 Agent 工具调用问题，或一处文档改进开始。
 
 ## 这个项目适合谁
 
@@ -31,7 +31,7 @@
 
 ## 如果你想动手实践
 
-Want to build? Start with [Privacy Boundary Lab](initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md).
+从 [Privacy Boundary Lab](initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md) 开始。独立复现时，可以在 Issue 里记录工具版本、预期结果、实际输出和卡点。请使用模拟数据。
 
 你可以从一个范围清楚、能够公开结果的小实践开始：
 

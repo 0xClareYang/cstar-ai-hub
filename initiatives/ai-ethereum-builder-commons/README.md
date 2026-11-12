@@ -1,6 +1,6 @@
 # Ethereum Privacy Builders Lab
 
-This is [C-Star AI Hub](../../README.md)'s first experiment in helping people understand and control what AI systems disclose and what actions they authorize. [Privacy Boundary Lab](starter/privacy-lab.md) gives Chinese-speaking developers a simulated agent scenario in which an internal note enters Ethereum calldata. They can inspect the transaction and verify what remains visible after the note is removed from the next payload.
+This is the first technical case in [C-Star AI Hub｜Agent Privacy Lab](../../README.md). [Privacy Boundary Lab](starter/privacy-lab.md) gives Chinese-speaking developers a simulated agent scenario in which an internal note enters Ethereum calldata. They can inspect the transaction and verify what remains visible after the note is removed from the next payload.
 
 ## Problem and why Ethereum
 
@@ -18,8 +18,8 @@ The lab uses a deterministic agent scenario with synthetic input and a fresh loc
 | Status | Evidence or acceptance |
 | --- | --- |
 | **Completed** | The [lab guide](starter/privacy-lab.md), runnable code and automated checks. Maintainer verification reproduced both local transactions and found the note only in the baseline. |
-| **Pending** | Interview developers, obtain an independent reproduction and publish a round of documentation fixes. Record checked versions, blockers and residual risks. |
-| **Conditional** | Run one small workshop if the first phase shows a concrete need and clears the reproduction and review gates in the [pilot protocol](PILOT.md). |
+| **Validation pending** | Obtain an independent reproduction and publish a round of improvements. Record checked versions, blockers and residual risks. |
+| **Future exploration** | A tool-call check and a small developer session depend on the evidence and review gates in the [pilot protocol](PILOT.md). |
 
 ## Public goods and limitations
 

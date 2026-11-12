@@ -1,14 +1,16 @@
-# C-Star AI Hub｜AI × Privacy
+# C-Star AI Hub｜Agent Privacy Lab
+
+**Helping people stay in control as AI agents act.**
 
 当 AI 开始调用工具、代表人执行任务，隐私也关乎人能否决定哪些数据可以被使用、哪些操作可以被授权，以及事后能否核查结果。我们希望人们在使用这些能力时，仍能理解并控制自己的数据与行动。
 
-C-Star AI Hub 是面向华语开发者的早期 AI × Privacy 实践项目。我们通过开源实验、开发者协作和使用反馈，研究这些控制在实际系统中能否做到。我们围绕具体问题选择技术和合作机会。
+C-Star AI Hub 是面向华语开发者的早期 Agent Privacy 研究与实践项目。我们从开源实验和开发者反馈出发，研究邮件、文件、API 和链上交易等操作中，人如何理解数据去向、授权具体行为并核查结果。我们根据问题选择技术与合作场景。
 
 **[从这里开始](START-HERE.md) · [查看资源](resources/README.md) · [活动记录](events/README.md) · [参与贡献](CONTRIBUTING.md)**
 
-## 公开产出
+## 已完成 · 公开产出
 
-- **[Privacy Boundary Lab](initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md)**：用模拟 Agent 场景和两笔本地交易，比较数据最小化前后的交易输入，练习确认交易并核对回执。提供中文教程、代码和测试。[查看专项与试点计划](initiatives/ai-ethereum-builder-commons/README.md)
+- **[Privacy Boundary Lab](initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md)** 用模拟 Agent 场景和两笔本地 Ethereum 交易，比较数据最小化前后的交易输入。维护者已跑通，中文教程、代码和测试已公开，外部独立复现待完成。 [专项介绍](initiatives/ai-ethereum-builder-commons/README.md)
 - [AI Incident Relay](https://github.com/0xClareYang/ai-incident-relay)：独立的事实核查演示，记录 AI 回答中的主张、来源和证据。
 - [Local AI 隐私实践教程研究提纲](resources/local-ai-privacy-practical-guide-outline.md)
 - [AI × Midnight Builder Meetup Hangzhou 活动记录](events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md)
@@ -17,21 +19,13 @@ C-Star AI Hub 是面向华语开发者的早期 AI × Privacy 实践项目。我
 
 ## 我们如何工作
 
+**Data → Exposure → Authorization → Execution → Evidence**
+
+设计实验时，依次检查任务需要什么数据、哪些信息会外传、谁批准及批准范围、实际调用了什么，以及凭什么核查结果和剩余风险。这是我们设计和复核实验的方法。
+
 **Learn → Connect → Build → Open**
 
-**Learn**  
-把分散的资料整理成更容易进入、能够追溯来源的中文资源。
-
-**Connect**  
-连接华语 Builders、研究者与相关开放技术社区。
-
-**Build**  
-通过活动、实践和协作，把理解进一步转化为具体成果。
-
-**Open**  
-把适合公开的知识、方法、文档与代码重新沉淀到公共网络。
-
-活动本身不是终点。我们希望一次交流结束之后，还能留下后来的人可以继续使用的东西。
+理解真实问题和已有技术，联系开发者与研究人员，用可运行的实验验证一个问题，再公开可共享的成果和测试方法。
 
 ## 已经开始
 
@@ -41,11 +35,13 @@ C-Star AI Hub 已建立微信公众号，作为目前主要的公开内容与社
 
 → [查看活动记录](events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md)
 
-C-Star 仍处于早期阶段。我们选择先把少量事情做实，再逐步扩大范围。
+## 未来探索 · 不同技术场景
 
-## 下一步验证
+本地 Ethereum 实验提供了可检查的交易输入和回执。下一步优先调查常见工具调用中的数据外传，Sentient 的开放 Agent 工具可作为参考。Midnight 的选择性披露是较远的研究方向，例如验证资格时只公开判断所需的信息。各方向的状态和技术边界见试点文档。 [案例与资料](initiatives/ai-ethereum-builder-commons/PILOT.md#research-contexts)
 
-先访谈约 5 位开发者，目标是至少 1 位外部开发者独立复现实验。记录卡点，完成一轮公开文档修订。复现和技术审查通过、访谈显示有实际需求后，再考虑一场 6–8 人的小型 Workshop。用独立完成情况、对数据暴露与授权边界的理解，以及后续反馈、Issue 或 PR 判断是否值得扩大。[查看试点与验收标准](initiatives/ai-ethereum-builder-commons/PILOT.md)
+## 验证阶段 · 接下来 90 天
+
+先验证是否存在一个反复出现、现有工具仍未充分解决的 Agent 数据暴露问题。目标是访谈 5–8 位开发者，邀请至少 1 位外部开发者独立复现实验，并公开一轮改进。后续是否做工具调用检查或小型测试会，取决于实际需求、外部试用和技术负责人能否投入。产品使用与付费需求目前仍待验证。 [试点与验收标准](initiatives/ai-ethereum-builder-commons/PILOT.md)
 
 ## 参与
 

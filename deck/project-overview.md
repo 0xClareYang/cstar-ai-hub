@@ -3,31 +3,23 @@ marp: true
 theme: default
 paginate: true
 lang: zh-CN
-title: C-Star AI Hub｜开源 AI 与隐私 Builder 计划
+title: C-Star AI Hub｜Agent Privacy Lab
 description: C-Star AI Hub project overview
 ---
 
-# C-Star AI Hub
+# C-Star AI Hub｜Agent Privacy Lab
 
-## 开源 AI · Privacy · 数字自主
+**Helping people stay in control as AI agents act.**
 
-面向华语 AI Builders，建立从学习、连接到 Build 与 Open Contribution 的实践路径。
-
-**一个正在生长的开放实践项目**
+面向华语开发者的早期 Agent Privacy 研究与实践项目。
 
 ---
 
 # 我们看到的问题
 
-华语 AI 社区已经有大量关于模型、产品、Agent 和商业机会的讨论。
+AI 开始代表人调用邮件、文件、API 或提交交易。人需要看清数据发给了谁、授权范围是什么，以及如何核查实际结果。
 
-但围绕以下议题的中文学习与实践资源仍比较分散：
-
-- Open-source AI 与 Local AI
-- Privacy 与用户数据控制
-- 数字自主与 Verifiability
-
-不少前沿讨论首先发生在英文社区，进入成本较高。一次性活动与实际 Build 之间仍有断层，从“了解和参与”走向 Open Contribution 的持续路径不足。
+实验围绕五个维度展开：Data → Exposure → Authorization → Execution → Evidence。
 
 ---
 
@@ -65,45 +57,23 @@ description: C-Star AI Hub project overview
 
 项目仍处于早期阶段，将从这些真实实践继续积累。
 
-Ethereum 专项：[Privacy Boundary Lab](../initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md)。用本地交易比较 AI Agent 提案的数据暴露与缩减结果。
+维护者已用本地交易复现模拟 Agent 提案中的数据暴露和缩减结果。外部独立复现待完成。
 
 ---
 
-# 接下来六个月
+# 接下来 90 天
 
-## 1. Open Knowledge
+- 访谈 5–8 位开发者，确认同一个数据暴露问题是否反复出现。
+- 邀请至少 1 位外部开发者独立复现实验，公开一轮改进。
+- 有需求证据和技术负责人后，再测试一个小的工具调用检查。
 
-Resource Map v0.1，以及少量有来源、可复用的中文 Tutorial / Research Note。
-
-## 2. Builder Network
-
-小规模 Meetup / Deep Dive，连接相关 Builders 与技术社区。关注重复参与和后续贡献，不以单次报名人数为主要结果。
-
-## 3. Learn → Build → Open
-
-后半程视条件尝试一次小型 collaborative build / contribution experiment，目标是产生真实的公开贡献。
-
-先把少量工作做实，再逐步扩大范围。
+[验证计划与停止条件](../initiatives/ai-ethereum-builder-commons/PILOT.md)
 
 ---
 
-# 公开产出与资源投入
+# 公开产出
 
-## Public Outputs
-
-- Open Resource Map
-- Tutorials / Research Notes
-- Event Notes / Materials
-- Contributor Guide
-- Builder Outputs
-- Public GitHub Archive
-
-## 资源主要用于
-
-- 内容与 Research
-- Builder Activities
-- Contributor Support
-- Community Coordination
-- 必要工具和基础运营
-
-目标不是只完成一次活动，而是把已有的小规模实践逐步转化为可持续、可复用的公共知识与 Builder Pathway。
+- [Privacy Boundary Lab](../initiatives/ai-ethereum-builder-commons/starter/privacy-lab.md) 的代码、中文教程和测试
+- [Local AI 隐私研究提纲](../resources/local-ai-privacy-practical-guide-outline.md)
+- [杭州 AI × Midnight 活动记录](../events/2026-08-22-ai-midnight-builder-meetup-hangzhou.md)
+- [AI Incident Relay](https://github.com/0xClareYang/ai-incident-relay) 独立事实核查演示
