@@ -1,12 +1,16 @@
 # Phase 0 pilot protocol
 
-**Status:** Planned. All participant counts and gates below are targets, not results.
+**Status:** Planned. Participant counts and acceptance thresholds are targets.
+
+Start by inviting a few external developers to follow the lab guide independently. Ask them to record their tool versions, first blocker and expected versus observed output. Use their reports to fix the code or guide before scheduling a facilitated session.
 
 ## Recruit and observe
 
 Recruit adults who can run a small AI-generated script, prefer Chinese instruction, and have never completed an Ethereum application. Use C-Star's existing community channels and invite people outside prior meetup attendees. Record prior wallet and coding experience in broad categories. Do not collect wallet keys, personal wallet addresses, or contact details in the public repository.
 
-**Targets:** Five 20-minute discovery interviews and one 60–75 minute session with 6–8 learners. These are capacity assumptions for one facilitator and one reviewer, not estimates of ecosystem demand.
+**Phase 1 targets:** About five discovery interviews, at least one independent reproduction and one public documentation revision. Record the issues behind the revision and link the changes.
+
+**Conditional Phase 2 target:** One 60–75 minute workshop with 6–8 learners. Proceed after independent reproduction, technical review and evidence of a learning blocker that existing materials did not resolve in at least three interviews.
 
 | Hypothesis | How to test it |
 | --- | --- |
@@ -30,15 +34,15 @@ Use an anonymous local worksheet with cohort code, baseline and transfer result 
 
 | Gate | Owner | Acceptance |
 | --- | --- | --- |
-| Reproduction before recruitment | Clare + PC for technical review (proposed) | An independent developer follows the lab from a clean environment, reproduces the calldata comparison and permission tests, and records issues and checked versions. Resolve any safety blocker before teaching. |
-| Demand and teaching check | Clare | Target: at least three discovery interviews show a concrete blocker during an attempt that existing resources did not resolve within the exercise. Target: at least two-thirds of a minimum six learners independently pass all three transfer checks. Record all denominators and missing data. |
+| Independent reproduction before a facilitated session | Clare + PC for technical review (proposed) | An external developer follows the lab from a clean environment and reproduces the calldata comparison and permission tests. Triage reported failures and resolve any safety blocker before teaching. |
+| Workshop learning check | Clare | Target: at least two-thirds of a minimum six learners independently pass all three transfer checks. Record completion, the denominator and missing data. |
 | Continued building and delivery capacity | Clare + technical reviewer | Target: at least two learners show a concrete follow-on artifact within about 30 days. Confirm reviewer time and facilitator coverage. Publish aggregate evidence, failures and fixes, and a decision to stop, revise, or expand. |
 
 If results are mixed, revise one bottleneck and repeat the short exercise. If existing resources already solve the problem, publish the observations and direct learners there. A continuation decision is conditional on all three gates.
 
 ## Costs, maintenance and risks
 
-Track preparation, review, facilitation and follow-up separately. Use the following template per milestone: **item · owner · estimated hours/units · estimated unit cost · actual hours/units · actual cost and currency · confirmed funding source or pending**. Leave cost fields unfilled until quoted or incurred. Venue, refreshments and paid tooling are optional, and no funding or spend is assumed. Record volunteer time separately. After delivery, compare total hours and direct cost per learner who passes the transfer task.
+Track preparation, review, facilitation and follow-up time separately. Record estimates, actual costs and volunteer time if a facilitated session takes place. Use those figures and the transfer task results to assess the effort per learner.
 
 - **Technical review:** No workshop is scheduled without a reviewer. Keep self-study available if there is no facilitator.
 - **Recruitment and bias:** Prior meetup attendees may be unusually engaged. Document channels and prior experience, and avoid treating the sample as representative.

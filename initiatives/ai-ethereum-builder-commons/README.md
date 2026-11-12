@@ -1,6 +1,6 @@
 # Ethereum Privacy Builders Lab
 
-C-Star AI Hub's Ethereum initiative for Chinese-speaking developers building with AI. Its first module, [Privacy Boundary Lab](starter/privacy-lab.md), shows how an agent-style transaction proposal can expose an internal note in Ethereum calldata, and how to verify that a smaller payload removes it.
+This is [C-Star AI Hub](../../README.md)'s first experiment in helping people understand and control what AI systems disclose and what actions they authorize. [Privacy Boundary Lab](starter/privacy-lab.md) gives Chinese-speaking developers a simulated agent scenario in which an internal note enters Ethereum calldata. They can inspect the transaction and verify what remains visible after the note is removed from the next payload.
 
 ## Problem and why Ethereum
 
@@ -17,9 +17,9 @@ The lab uses a deterministic agent scenario with synthetic input and a fresh loc
 
 | Status | Evidence or acceptance |
 | --- | --- |
-| **Completed** | The [lab guide](starter/privacy-lab.md), runnable code and automated checks. The local test must reproduce two successful transactions, confirm the note appears only in the baseline, and reject an unapproved or invalid request. |
-| **In Progress** | First milestone acceptance. An external developer should install from the guide, reproduce both outputs, identify who can read each field, and explain residual risks. Record tool versions and fixes through a GitHub issue or PR. |
-| **Proposed** | Observe a small learner cohort using the [pilot protocol](PILOT.md). Consider four workshops over 12 weeks only if independent reproduction, learner outcomes and facilitator capacity support it. |
+| **Completed** | The [lab guide](starter/privacy-lab.md), runnable code and automated checks. Maintainer verification reproduced both local transactions and found the note only in the baseline. |
+| **Pending** | Interview developers, obtain an independent reproduction and publish a round of documentation fixes. Record checked versions, blockers and residual risks. |
+| **Conditional** | Run one small workshop if the first phase shows a concrete need and clears the reproduction and review gates in the [pilot protocol](PILOT.md). |
 
 ## Public goods and limitations
 
@@ -27,4 +27,4 @@ The reusable materials are the Chinese exercise, test suite, exposure checklist 
 
 Addresses, fees, timing and the opaque reference remain visible and linkable. The sample does not run an external AI service, model RPC privacy, protect the signer or implement private transactions or EIP-7702 delegation. External review and learner outcomes are pending.
 
-For [ESP Office Hours](https://esp.ethereum.foundation/applicants/office-hours), we would welcome feedback on existing application-layer privacy exercises and on what evidence would make this lesson useful to other Ethereum educators.
+We welcome feedback from developers and educators on existing application-layer privacy exercises and on evidence that would make this lesson useful to others. We also welcome project feedback through [ESP Office Hours](https://esp.ethereum.foundation/applicants/office-hours).
